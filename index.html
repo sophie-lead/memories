@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Our Memories</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --color-bg: #fdf9f5;
+    --color-primary: #264653;
+    --color-accent: #e76f51;
+    --color-text: #3a3a3a;
+    --color-text-light: #7a7a7a;
+    --shadow-light: rgba(0,0,0,0.07);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+
+  header {
+    padding: 3rem 1.5rem 1rem;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+  }
+
+  main {
+    max-width: 1215px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+
+  .memory {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+    background: white;
+    padding: 1.7rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .memory:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+  }
+
+  /* Чередування фото і тексту */
+  .memory:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .memory img {
+    flex-shrink: 0;
+    width: 560px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px var(--shadow-light);
+  }
+
+  .memory-text {
+    padding: 0 20px;
+    margin: 0 20px;
+    flex: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    position: relative;
+  }
+
+  .memory-text::before,
+  .memory-text::after {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: var(--color-accent);
+    position: absolute;
+  }
+  .memory-text::before {
+    content: "“";
+    top: -0.8rem;
+    left: -1rem;
+  }
+  .memory-text::after {
+    content: "”";
+    bottom: -0.8rem;
+    right: -1rem;
+  }
+
+  @media (max-width: 900px) {
+  .memory {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding: 1.2rem 1rem;
+  }
+
+  .memory:nth-child(even) {
+    flex-direction: column !important;
+  }
+
+  .memory img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .memory-text {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    position: static;
+  }
+
+  .memory-text::before,
+  .memory-text::after {
+    display: none;
+  }
+
+  main {
+    padding: 0 0.7rem;
+    max-width: 600px;
+  }
+}
+
+  footer {
+    text-align: center;
+    color: var(--color-text-light);
+    padding: 2rem 1rem 3rem;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Our Memories</h1>
+  <p>You feel like home ❤️</p>
+</header>
+
+<main>
+
+  <section class="memory">
+    <img src="photos/1.jpg" alt="Memory 1" />
+    <div class="memory-text">
+      I want to remind both of us that even though things are hard right now, in the end, we will still be together.
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/2.jpg" alt="Memory 2" />
+    <div class="memory-text">
+      This photo reflects how hard it is for me to make decisions in life. I stood for half an hour or even more over these magnets. But I never doubted if I wanted to be with you — I already knew the answer.
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/3.jpg" alt="Memory 3" />
+    <div class="memory-text">
+      Just so you know what will happen to you if you’re not a good boy)))
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/4.jpg" alt="Memory 4" />
+    <div class="memory-text">
+      I will always be amazed that there are so many different sluts in the world, like these stores, yet you chose me.
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/5.jpg" alt="Memory 5" />
+    <div class="memory-text">
+      This photo makes me think about what lies ahead for us. I really want to build our future together. Can't wait!!!
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/6.jpg" alt="Memory 6" style="height: 372px;"/>
+    <div class="memory-text">
+      What might seem very scary at first can actually turn out to be... a flower. It’s all in our heads
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/7.jpg" alt="Memory 7" />
+    <div class="memory-text">
+      Just wanted to remind you that I love you very much, especially when you hold me by the neck.
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/8.jpg" alt="Memory 8" />
+    <div class="memory-text">
+      When you say I can’t do something — think twice))) You’re challenging me.
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/9.jpg" alt="Memory 9" />
+    <div class="memory-text">
+      At first, you didn’t really want to make Vareniki with me. But I’m very thankful that you did. I really appreciate you...
+    </div>
+  </section>
+
+  <section class="memory">
+    <img src="photos/10.jpg" alt="Memory 10" style="height: auto !important"/>
+    <div class="memory-text">
+      That day I felt like part of a family. Thank you for such a gift c:
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  From Sophie ❤️
+</footer>
+
+</body>
+</html>
